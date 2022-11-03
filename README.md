@@ -24,15 +24,41 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
+
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+
+The `.map` is a method that collects the results of executing a provided function on each element of an array and returns a new array. A usecase for `.map` is to receive an argument of an array as a parameter with a function and return and create a new array. 
+
+`.filter` is a method that returns a new array by collecting elements for which the result of the given function is true for each element of the array. `.filter` iterates through each element of the array, executes the callback function, and returns an array with only the elements that meet the condition.
+
+The `.reduce` iterates over each element of the array, accumulates the execution values of the callback function, and returns a single result value. The reason we have to put initialValue when using `.reduce` has to do with how it works. Depending on whether initialValue is set or not, the accumulator and currentValue at the first callback are different.
+
 
 2. Explain the difference between a callback and a higher order function.
 
+A callback function is a function that is passed to the inside of another function as an argument through a function parameter. A higher order function is a function that receives a function from other function through a parameter or returns a function as a return value.
+
+
 3. Explain what a closure is.
+
+Closure is a combination of a function and its declared lexical environment. Closure refers to a function that allows the returned internal function to access the environment (scope) even if it is called outside the environment (scope) when it is declared by remembering the scope, which is the environment when it is declared. To put it more simply, it can be said that the closure is a function that remembers the Lexical environment when it is created.
+
 
 4. Describe the four principles of the 'this' keyword.
 
+  Window/Global Object Binding - If we don't tell what 'this' is, it will return the window to us, the global object in node or undefined in strict mode.
+
+  Implicit Binding - it apply to objects with methods. When the function is invoked, uses to the left of the dot - the object before the dot.
+
+  New binding - It is used with constructor functions. when a function is invoked as a constructor function using the 'new' keyword 'this' points to the newly created object. 
+
+  Explicit binding - explicitly pass in as an argument what we want 'this' to refer to. We can use .call(), .apply(), .bind() 
+
+
 5. Why do we need super() in an extended class?
+
+The super() keyword is used to call the constructor of the parent class to access the properties and methods of the parent.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
